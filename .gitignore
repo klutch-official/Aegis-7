@@ -1,0 +1,43 @@
+# Local machine settings
+local.properties
+*.iml
+.idea/
+.vscode/
+
+# Build output
+.gradle/
+build/
+**/build/
+dist/
+node_modules/
+
+# Android outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Native build output
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+*.o
+*.so
+
+# AI model files - never commit model weights
+*.gguf
+*.ggml
+models/
+model-cache/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+secrets/
+*.keystore
+*.jks
+
+# Logs
+*.log
