@@ -17,6 +17,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Download pinned llama.cpp source
+        run: |
+          git clone --depth 1 --branch v0.6.0 \
+            https://github.com/ggml-org/llama.cpp.git \
+            app/src/main/cpp/llama.cpp
+          test "$(git -C app/src/main/cpp/llama.cpp rev-parse HEAD)" = \
+            "d81235049384534c167caea52b85a694f6103d14"
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
