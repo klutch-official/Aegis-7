@@ -12,6 +12,7 @@ import android.net.Uri
 import android.provider.OpenableColumns
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
@@ -173,7 +174,7 @@ class MainActivity : Activity() {
 
         scroll.addView(
             messages,
-            ScrollView.LayoutParams(-1, -2)
+            ViewGroup.LayoutParams(-1, -2)
         )
 
         root.addView(
